@@ -1,0 +1,13 @@
+# Kaggle API credentials -- NEVER commit this
+kaggle.json
+
+# Downloaded datasets (large, and re-downloaded automatically by the notebook)
+cicids2017/
+cicids2018/
+
+# Jupyter / Python cruft
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
