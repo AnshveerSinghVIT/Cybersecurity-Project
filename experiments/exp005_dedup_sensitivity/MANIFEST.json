@@ -1,0 +1,54 @@
+{
+  "experiment_id": "exp005_dedup_sensitivity",
+  "depends_on": [
+    "exp001_baseline",
+    "exp002_seeds"
+  ],
+  "description": "Dedup/label-conflict policy sensitivity with group-level split and a common test set",
+  "scripts": {
+    "exp005_dedup_sensitivity.py": "af2e10bc8cfa5db6ff74e61cd39ab52889e73b927e559b0c0a502a145b374d38",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp005_dedup_sensitivity.py --seeds 42 --splits temporal random --trees 100",
+  "seeds": [
+    42
+  ],
+  "seed_meaning": "RF random_state; split seed fixed at 42",
+  "split_definitions": {
+    "temporal": "row-order proxy per first-occurrence label, 80/20, 1% purge, over hash groups",
+    "random": "stratified on first-occurrence label, 80/20, seed 42, over hash groups",
+    "none_rowsplit": "row-level stratified random 80/20 seed 42, no dedup"
+  },
+  "dedup_policies": [
+    "drop_conflicts",
+    "keep_first",
+    "majority",
+    "none"
+  ],
+  "fixed_fine_classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack - Brute Force",
+    "Web Attack - XSS"
+  ],
+  "runtime_sec": 1247.0,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "data_prep.json": "59fe0e4f9d9e4e2bd00266bbf886f5b4b559e538deaa9015eb451aa122dbb76d",
+    "run.log": "f51a02d42f25245185ae72a0d76b7538fe8c019f26f31d4b8fcf0dbce5a977c2",
+    "summary.md": "f661cc43ae7504937a4c0bd598b77977ce63ad982a0505a117de8da0843f01d1"
+  }
+}

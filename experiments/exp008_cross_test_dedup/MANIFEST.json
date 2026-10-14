@@ -1,0 +1,35 @@
+{
+  "experiment_id": "exp008_cross_test_dedup",
+  "depends_on": [
+    "exp003_cross_family"
+  ],
+  "description": "exp003 training unchanged; 2018 test population with/without deduplication",
+  "scripts": {
+    "exp008_cross_test_dedup.py": "1e829a6202864982086ed024042d2e6c444a843f0b0a2bb630629f75bb31789d",
+    "exp003_cross_family.py": "4cf532be0b5967e76a1a369d8216a87b4441682a561265a279dc1b66f39ffba4",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp008_cross_test_dedup.py",
+  "seeds": [
+    42,
+    1,
+    2
+  ],
+  "policies": [
+    "drop_conflicts",
+    "keep_first",
+    "none"
+  ],
+  "runtime_sec": 464.3,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "data_prep.json": "a25a2fd09371f0440ed3066f08ff52659f9124b783c06b8933cc79a38500272a",
+    "run.log": "96e9745efd45b7f222c71ec410819f4c1fdc031beebf177861b19921f456456a",
+    "summary.md": "bd3c231beff7246914e9f9616b80a81a04702727352f47317e002a405babdde7"
+  }
+}

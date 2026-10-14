@@ -1,0 +1,88 @@
+{
+  "experiment_id": "exp002_seeds",
+  "depends_on": "exp001_baseline",
+  "description": "Seed variability; split randomness and model randomness varied separately",
+  "scripts": {
+    "exp002_seeds.py": "bac2b3addf2523d06e56fa7b7bf06fa69f1a38a6e12dadd00cfd67d37e27dea0",
+    "ids_common.py": "bdfb9423cd9295d11547a3fbdd467fb6efd91c12ff3e42679c59d9bd70e735d4"
+  },
+  "cmd": "python exp002_seeds.py --seeds 42 1 2 3 4 --trees 100",
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "model": "RandomForest(n_estimators=100,max_depth=20,class_weight=balanced)",
+  "dedup_policy": "drop_conflicts",
+  "class_mapping": "fine: >=500 deduped samples else Other/Rare; family: ids_common.FAMILY",
+  "split_definitions": {
+    "temporal": "within raw label chronological 80/20, 1% purge gap (deterministic)",
+    "random": "stratified on raw label 80/20"
+  },
+  "sanity_check": {
+    "temporal": {
+      "reproduces_exp001": true,
+      "pairs": {
+        "stage1_macro_f1": [
+          0.9420741075574746,
+          0.9420741075574746
+        ],
+        "family_gt": [
+          0.8449597385213369,
+          0.8449597385213369
+        ],
+        "family_e2e": [
+          0.7785518328486443,
+          0.7785518328486443
+        ],
+        "fine_gt": [
+          0.778469159841447,
+          0.778469159841447
+        ],
+        "fine_e2e": [
+          0.7506321449006159,
+          0.7506321449006159
+        ]
+      }
+    },
+    "random": {
+      "reproduces_exp001": true,
+      "pairs": {
+        "stage1_macro_f1": [
+          0.9979857141703199,
+          0.9979857141703199
+        ],
+        "family_gt": [
+          0.973900806008371,
+          0.973900806008371
+        ],
+        "family_e2e": [
+          0.9240711713239653,
+          0.9240711713239653
+        ],
+        "fine_gt": [
+          0.9105869903472513,
+          0.9105869903472513
+        ],
+        "fine_e2e": [
+          0.8859192790293412,
+          0.8859192790293412
+        ]
+      }
+    }
+  },
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "data_prep.json": "31af9ee3cec501fbfda83c7bb790d6f263257190e79d6055963d54d8957048bb",
+    "run.log": "e7820c2d90f6aaf68670c3afd3f74e8e597897ad0535fe52bf362a1c10712e5b",
+    "summary.json": "25149427dd85060059fb457774cfd4077ce3969b05984694182f3bb3fa702f62",
+    "summary.md": "aa297427af1052bfa658df0e94656e50fdf6900ade0d6550ea210d5fbd455d7b"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "supports": {
+    "drop_conflicts": {
+      "BENIGN": 1274630,
+      "DoS Hulk": 145199,
+      "Web Attack - Brute Force": 225,
+      "Web Attack - XSS": 79,
+      "DoS Slowhttptest": 55,
+      "Web Attack - Sql Injection": 31
+    },
+    "keep_first": {
+      "BENIGN": 1274630,
+      "DoS Hulk": 145199,
+      "Web Attack - Brute Force": 228,
+      "Web Attack - XSS": 79,
+      "DoS Slowhttptest": 55,
+      "Web Attack - Sql Injection": 31
+    },
+    "none": {
+      "BENIGN": 1489375,
+      "DoS Hulk": 461912,
+      "DoS Slowhttptest": 139890,
+      "Web Attack - Brute Force": 249,
+      "Web Attack - XSS": 79,
+      "Web Attack - Sql Injection": 34
+    }
+  }
+}

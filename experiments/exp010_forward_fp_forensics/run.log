@@ -1,0 +1,26 @@
+  loaded Monday-WorkingHours.pcap_ISCX.csv: 529,481 (after NaN/Inf drop)
+  loaded Tuesday-WorkingHours.pcap_ISCX.csv: 445,645 (after NaN/Inf drop)
+  loaded Wednesday-workingHours.pcap_ISCX.csv: 691,406 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288,395 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170,231 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225,711 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286,096 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Morning.pcap_ISCX.csv: 190,911 (after NaN/Inf drop)
+  Monday-WorkingHours.pcap_ISCX.csv: ml=529,918 labelled=529,918 (raw 529,918) match=1.0
+  Tuesday-WorkingHours.pcap_ISCX.csv: ml=445,909 labelled=445,909 (raw 445,909) match=1.0
+  Wednesday-workingHours.pcap_ISCX.csv: ml=692,703 labelled=692,703 (raw 692,703) match=1.0
+  Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: ml=288,602 labelled=288,602 (raw 288,602) match=1.0
+  Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: ml=170,366 labelled=170,366 (raw 458,968) match=1.0
+  Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: ml=225,745 labelled=225,745 (raw 225,745) match=1.0
+  Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: ml=286,467 labelled=286,467 (raw 286,467) match=1.0
+  Friday-WorkingHours-Morning.pcap_ISCX.csv: ml=191,033 labelled=191,033 (raw 191,033) match=1.0
+forward reproduction (got, exp004): {'benign_fp': [10612, 10612], 'benign_row_fine': [{'DDoS': 9685, 'Bot': 803, 'DoS Hulk': 66, 'DoS Slowhttptest': 48, 'DoS GoldenEye': 6, 'Web Attack - Brute Force': 2, 'PortScan': 2}, {'Bot': 803, 'DDoS': 9685, 'DoS GoldenEye': 6, 'DoS Hulk': 66, 'DoS Slowhttptest': 48, 'PortScan': 2, 'Web Attack - Brute Force': 2}]}
+random reproduction (got, exp004): {'benign_fp': [254, 254], 'benign_row_fine': [{'Bot': 116, 'DoS Hulk': 64, 'DoS Slowhttptest': 54, 'DDoS': 13, 'Web Attack - Brute Force': 3, 'PortScan': 2, 'DoS GoldenEye': 2}, {'Bot': 116, 'DDoS': 13, 'DoS GoldenEye': 2, 'DoS Hulk': 64, 'DoS Slowhttptest': 54, 'PortScan': 2, 'Web Attack - Brute Force': 3}]}
+forward {'benign_fp': 10612, 'benign_on_ddos_pair': 31515, 'benign_on_bot_cc': 966, 'fp_on_ddos_pair': 9685, 'fp_on_bot_cc': 802}
+   stage1_all {'precision': 0.85842, 'recall': 0.95693, 'f1': 0.905, 'fpr': 0.02849, 'benign_n': 372432, 'benign_fp': 10612, 'fpr_ci95': [0.027964280512416045, 0.029033030779655907]}
+   stage1_excl_ddos_pair_benign {'precision': 0.9858, 'recall': 0.95693, 'f1': 0.97115, 'fpr': 0.00272, 'benign_n': 340917, 'benign_fp': 927, 'fpr_ci95': [0.002549845749439117, 0.002899635107409736]}
+   stage1_excl_both_benign {'precision': 0.99806, 'recall': 0.95693, 'f1': 0.97706, 'fpr': 0.00037, 'benign_n': 339951, 'benign_fp': 125, 'fpr_ci95': [0.00030865077668596743, 0.00043804133925888153]}
+random {'benign_fp': 254, 'benign_on_ddos_pair': 7620, 'benign_on_bot_cc': 179, 'fp_on_ddos_pair': 4, 'fp_on_bot_cc': 116}
+   stage1_all {'precision': 0.99622, 'recall': 0.99695, 'f1': 0.99659, 'fpr': 0.00068, 'benign_n': 372431, 'benign_fp': 254, 'fpr_ci95': [0.000603152951612528, 0.0007711588549872549]}
+   stage1_excl_ddos_pair_benign {'precision': 0.99628, 'recall': 0.99695, 'f1': 0.99662, 'fpr': 0.00069, 'benign_n': 364811, 'benign_fp': 250, 'fpr_ci95': [0.0006054622364213586, 0.0007756263119234905]}
+   stage1_excl_both_benign {'precision': 0.998, 'recall': 0.99695, 'f1': 0.99748, 'fpr': 0.00037, 'benign_n': 364632, 'benign_fp': 134, 'fpr_ci95': [0.0003103237252266296, 0.00043519157795140004]}

@@ -1,0 +1,31 @@
+{
+  "experiment_id": "exp006_shift_diagnosis",
+  "depends_on": [
+    "exp003_cross_family"
+  ],
+  "description": "Diagnosis of 2017->2018 collapse: unit identities, per-feature shift, adversarial validation, 2018 duplication forensics. No detector evaluated.",
+  "scripts": {
+    "exp006_shift_diagnosis.py": "b40b62253152f721b13be6fa952616164a14503666d0900d9cc0077a62335f2e",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp006_shift_diagnosis.py",
+  "seed": 0,
+  "subsample_per_domain": 100000,
+  "population": "identical to exp003 (asserted)",
+  "runtime_sec": 282.5,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "ecdf_top6_dos_hulk.png": "9019c25860c0099df9b52354fe2a74f0eb7574633feaa93b9c5f9ee03709867c",
+    "feature_shift_benign.csv": "3f5a512c7c4b73bf41eb48e3c148c33becdd93bc0d8d05fef52d8163bd7ca438",
+    "feature_shift_dos_hulk.csv": "cf79d1a927abb0502d11a9b3702e4a758b6a2a2a0a4b6f055fbd2f6bef3bfa8a",
+    "ks_top20.png": "b35a95b29094477ffb840d43f5a5d5dd39b83d43c72363117bce85c72732c2df",
+    "run.log": "7ead5dc73eeceb62be69bb52423829de302ec9c0edce76a2e06e690ea7df92cb",
+    "summary.json": "3c6ddf94303d7f549e7d43173bdaa4efcd5dcaa480761e769d4e0a0d809fab5d",
+    "summary.md": "34c7c91cdd1c7146c60ff7e71b76a259e426d5193fdf27b39e3f7b8fc912a643"
+  }
+}

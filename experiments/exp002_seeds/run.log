@@ -1,0 +1,31 @@
+Loading ...
+  loaded Monday-WorkingHours.pcap_ISCX.csv: 529,918
+  loaded Tuesday-WorkingHours.pcap_ISCX.csv: 445,909
+  loaded Wednesday-workingHours.pcap_ISCX.csv: 692,703
+  loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288,602
+  loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170,366
+  loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225,745
+  loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286,467
+  loaded Friday-WorkingHours-Morning.pcap_ISCX.csv: 191,033
+  ready: 2,198,315 rows, 76 features (75s)
+temporal_splitNone_model42: mal-F1=0.9029 famGT=0.8450 fineGT=0.7785 (125.5s)
+temporal_splitNone_model1: mal-F1=0.9023 famGT=0.8269 fineGT=0.7930 (141.5s)
+temporal_splitNone_model2: mal-F1=0.9002 famGT=0.8517 fineGT=0.7812 (149.7s)
+temporal_splitNone_model3: mal-F1=0.9084 famGT=0.8221 fineGT=0.7897 (151.1s)
+temporal_splitNone_model4: mal-F1=0.9007 famGT=0.8435 fineGT=0.7798 (155.7s)
+random_split42_model42: mal-F1=0.9966 famGT=0.9739 fineGT=0.9106 (142.0s)
+random_split1_model42: mal-F1=0.9967 famGT=0.9609 fineGT=0.9219 (156.6s)
+random_split2_model42: mal-F1=0.9965 famGT=0.9826 fineGT=0.9136 (160.4s)
+random_split3_model42: mal-F1=0.9968 famGT=0.9845 fineGT=0.9188 (162.4s)
+random_split4_model42: mal-F1=0.9966 famGT=0.9611 fineGT=0.9118 (161.6s)
+random_split42_model1: mal-F1=0.9966 famGT=0.9742 fineGT=0.9071 (152.3s)
+random_split42_model2: mal-F1=0.9967 famGT=0.9745 fineGT=0.9090 (153.2s)
+random_split42_model3: mal-F1=0.9966 famGT=0.9740 fineGT=0.9085 (156.4s)
+random_split42_model4: mal-F1=0.9966 famGT=0.9743 fineGT=0.9046 (154.6s)
+sanity [temporal] reproduces exp001: True
+sanity [random] reproduces exp001: True
+| Group | n | Stage1 mal-F1 | Benign FPR | Family GT | Family E2E | Fine GT | Fine E2E |
+|---|---|---|---|---|---|---|---|
+| temporal/model | 5 | 0.9029 ± 0.0033 | 2.922% ± 0.144 | 0.8378 ± 0.0127 | 0.7780 ± 0.0041 | 0.7844 ± 0.0065 | 0.7522 ± 0.0051 |
+| random/split | 5 | 0.9966 ± 0.0001 | 0.069% ± 0.003 | 0.9726 ± 0.0113 | 0.9283 ± 0.0089 | 0.9154 ± 0.0048 | 0.8852 ± 0.0019 |
+| random/model | 5 | 0.9966 ± 0.0000 | 0.066% ± 0.003 | 0.9742 ± 0.0002 | 0.9240 ± 0.0007 | 0.9080 ± 0.0022 | 0.8844 ± 0.0013 |

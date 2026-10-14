@@ -1,0 +1,32 @@
+{
+  "experiment_id": "exp004_leakage_vs_drift",
+  "depends_on": [
+    "exp002_seeds"
+  ],
+  "description": "Random vs Flow-ID-grouped vs time-block-grouped vs forward-time vs row-order splits",
+  "scripts": {
+    "exp004_leakage_vs_drift.py": "0679f8512315844add59898b91e7d067ced08f9beac0a3040dad83e34d27cae5",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp004_leakage_vs_drift.py --seeds 42 1 --blocks 1 5 15 --trees 100",
+  "seeds": [
+    42,
+    1
+  ],
+  "dedup_policy": "drop_conflicts",
+  "class_mapping": "as exp002",
+  "metadata_source": "Kaggle pshikk/cicids2017-untampered GeneratedLabelledFlows/TrafficLabelling",
+  "timestamp_fix": "hour<8 -> +12h (12-hour clock without AM/PM in afternoon files)",
+  "runtime_sec": 1593.7,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "data_prep.json": "6cb1a8b029d12dfbc1d22b498e807cecd92f72463ef1e3cab505ee3d8233b81a",
+    "run.log": "d8077cceac71db28c9559782da0a31483aafe1bd6dda89a82077b2ed1572756e",
+    "summary.md": "8c3164f4f897bb66114fa6302a4c9e9db191652078cb1c4ac2135d32b82c2657"
+  }
+}

@@ -8,3 +8,14 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# timestamped CICIDS2017 release (GeneratedLabelledFlows), used by exp004
+cicids2017_labelled/
+
+# document build dependencies
+deliverables/build/node_modules/
+
+# LaTeX build intermediates
+deliverables/paper/*.aux
+deliverables/paper/*.log
+deliverables/paper/*.out

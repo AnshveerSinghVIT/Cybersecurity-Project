@@ -1,0 +1,42 @@
+{
+  "experiment_id": "exp007_shift_mitigation",
+  "depends_on": [
+    "exp003_cross_family",
+    "exp006_shift_diagnosis"
+  ],
+  "description": "Label-free (transductive) mitigation of 2017->2018 shift; 2018 upper bound; reverse direction; XGBoost",
+  "scripts": {
+    "exp007_shift_mitigation.py": "2902666632f208bec500aba895740cd1cd94134c61b9739a6b9fcb1f98587c48",
+    "exp003_cross_family.py": "4cf532be0b5967e76a1a369d8216a87b4441682a561265a279dc1b66f39ffba4",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp007_shift_mitigation.py",
+  "rf_seeds": [
+    42,
+    1,
+    2
+  ],
+  "xgb_seed": 42,
+  "transforms": [
+    "none",
+    "slog",
+    "robust_domain",
+    "quantile_domain",
+    "drop_k10",
+    "drop_k25"
+  ],
+  "target_label_use": "none (target feature statistics only)",
+  "population": "identical to exp003 (asserted)",
+  "runtime_sec": 3422.5,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "ks_rank.json": "92587ae878b3df52e59be47fdfde5a328c8075167062a5ed36613904a8770785",
+    "run.log": "0c4719327132b1a2ee0f83a4e377a854bb4e511b9f51afd54b54cdb4f6b0df86",
+    "summary.md": "34faa26f77d5ff87c913e9dd5da5c708d7399dddd03dedc75cea04bb3422f530"
+  }
+}

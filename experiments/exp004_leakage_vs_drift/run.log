@@ -1,0 +1,84 @@
+Loading MachineLearningCSV ...
+  loaded Monday-WorkingHours.pcap_ISCX.csv: 529,481 (after NaN/Inf drop)
+  loaded Tuesday-WorkingHours.pcap_ISCX.csv: 445,645 (after NaN/Inf drop)
+  loaded Wednesday-workingHours.pcap_ISCX.csv: 691,406 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288,395 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170,231 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225,711 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286,096 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Morning.pcap_ISCX.csv: 190,911 (after NaN/Inf drop)
+Loading + verifying GeneratedLabelledFlows metadata ...
+  Monday-WorkingHours.pcap_ISCX.csv: ml=529,918 labelled=529,918 (raw 529,918) match=1.0
+  Tuesday-WorkingHours.pcap_ISCX.csv: ml=445,909 labelled=445,909 (raw 445,909) match=1.0
+  Wednesday-workingHours.pcap_ISCX.csv: ml=692,703 labelled=692,703 (raw 692,703) match=1.0
+  Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: ml=288,602 labelled=288,602 (raw 288,602) match=1.0
+  Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: ml=170,366 labelled=170,366 (raw 458,968) match=1.0
+  Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: ml=225,745 labelled=225,745 (raw 225,745) match=1.0
+  Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: ml=286,467 labelled=286,467 (raw 286,467) match=1.0
+  Friday-WorkingHours-Morning.pcap_ISCX.csv: ml=191,033 labelled=191,033 (raw 191,033) match=1.0
+{
+ "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.9992839973044814,
+  "frac_rows_more_than_60s_behind_running_max": 0.0,
+  "frac_rows_more_than_600s_behind_running_max": 0.0
+ },
+ "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.9999195774011442,
+  "frac_rows_more_than_60s_behind_running_max": 0.0,
+  "frac_rows_more_than_600s_behind_running_max": 0.0
+ },
+ "Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.9999597445975396,
+  "frac_rows_more_than_60s_behind_running_max": 0.0,
+  "frac_rows_more_than_600s_behind_running_max": 0.0
+ },
+ "Monday-WorkingHours.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.48204763647864424,
+  "frac_rows_more_than_60s_behind_running_max": 0.6558568968148423,
+  "frac_rows_more_than_600s_behind_running_max": 0.48754932525234906
+ },
+ "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.9999788795793187,
+  "frac_rows_more_than_60s_behind_running_max": 0.0,
+  "frac_rows_more_than_600s_behind_running_max": 0.0
+ },
+ "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.9999665558757107,
+  "frac_rows_more_than_60s_behind_running_max": 0.0,
+  "frac_rows_more_than_600s_behind_running_max": 0.0
+ },
+ "Tuesday-WorkingHours.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.47043837199160105,
+  "frac_rows_more_than_60s_behind_running_max": 0.8294751190749796,
+  "frac_rows_more_than_600s_behind_running_max": 0.733192794477774
+ },
+ "Wednesday-workingHours.pcap_ISCX.csv": {
+  "spearman_pos_vs_time": 0.6558294854438527,
+  "frac_rows_more_than_60s_behind_running_max": 0.9095481692232452,
+  "frac_rows_more_than_600s_behind_running_max": 0.865723404027459
+ }
+}
+row-order vs forward-time split: {'test_jaccard_roworder_vs_forward': 0.8633519313941341, 'train_jaccard_roworder_vs_forward': 0.9429913673121417}
+roworder_seed42: mal-F1=0.9029 FPR=0.0289 famGT=0.8450 fineGT=0.7785 (109.4s)
+forward_seed42: mal-F1=0.9050 FPR=0.0285 famGT=0.8424 fineGT=0.7757 (108.4s)
+random_seed42: mal-F1=0.9966 FPR=0.0007 famGT=0.9739 fineGT=0.9106 (109.4s)
+flowid_seed42: mal-F1=0.9962 FPR=0.0007 famGT=0.9715 fineGT=0.9162 (111.0s)
+block1_seed42: mal-F1=0.9933 FPR=0.0008 famGT=0.9736 fineGT=0.8863 (104.6s)
+block5_seed42: mal-F1=0.9953 FPR=0.0007 famGT=0.9760 fineGT=0.9138 (103.3s)
+block15_seed42: mal-F1=0.9954 FPR=0.0013 famGT=0.9557 fineGT=0.8639 (88.1s)
+roworder_seed1: mal-F1=0.9023 FPR=0.0296 famGT=0.8269 fineGT=0.7930 (107.4s)
+forward_seed1: mal-F1=0.9016 FPR=0.0295 famGT=0.8371 fineGT=0.7906 (107.2s)
+random_seed1: mal-F1=0.9967 FPR=0.0007 famGT=0.9603 fineGT=0.9185 (110.0s)
+flowid_seed1: mal-F1=0.9967 FPR=0.0008 famGT=0.9693 fineGT=0.9069 (113.5s)
+block1_seed1: mal-F1=0.9922 FPR=0.0009 famGT=0.9717 fineGT=0.8933 (112.7s)
+block5_seed1: mal-F1=0.9953 FPR=0.0006 famGT=0.9599 fineGT=0.8817 (112.7s)
+block15_seed1: mal-F1=0.9954 FPR=0.0007 famGT=0.9566 fineGT=0.8454 (102.2s)
+| Split | Stage1 mal-F1 | Benign FPR | Family GT | Family E2E | Fine GT | Fine E2E | PortScan fam-GT F1 | slowloris fine-GT F1 |
+|---|---|---|---|---|---|---|---|---|
+| random | 0.9966 ± 0.0001 | 0.0667 ± 0.0021% | 0.9671 ± 0.0096 | 0.9227 ± 0.0020 | 0.9145 ± 0.0056 | 0.8867 ± 0.0011 | 0.9802 ± 0.0049 | 0.9967 ± 0.0020 |
+| flowid | 0.9965 ± 0.0003 | 0.0741 ± 0.0030% | 0.9704 ± 0.0016 | 0.9272 ± 0.0020 | 0.9115 ± 0.0066 | 0.8784 ± 0.0027 | 0.9837 ± 0.0059 | 0.9960 ± 0.0003 |
+| block1 | 0.9927 ± 0.0008 | 0.0849 ± 0.0056% | 0.9727 ± 0.0013 | 0.9241 ± 0.0052 | 0.8898 ± 0.0049 | 0.8621 ± 0.0044 | 0.9606 ± 0.0063 | 0.8666 ± 0.0825 |
+| block5 | 0.9953 ± 0.0000 | 0.0653 ± 0.0036% | 0.9680 ± 0.0114 | 0.9147 ± 0.0199 | 0.8977 ± 0.0227 | 0.8746 ± 0.0277 | 0.9324 ± 0.0649 | 0.8693 ± 0.1123 |
+| block15 | 0.9954 ± 0.0000 | 0.1027 ± 0.0416% | 0.9561 ± 0.0007 | 0.8837 ± 0.0286 | 0.8547 ± 0.0131 | 0.8339 ± 0.0128 | 0.8984 ± 0.0889 | 0.8734 ± 0.0195 |
+| forward | 0.9033 ± 0.0024 | 2.8986 ± 0.0697% | 0.8397 ± 0.0038 | 0.7709 ± 0.0008 | 0.7832 ± 0.0105 | 0.7458 ± 0.0056 | 0.3239 ± 0.0000 | 0.7417 ± 0.0396 |
+| roworder | 0.9026 ± 0.0004 | 2.9224 ± 0.0524% | 0.8359 ± 0.0128 | 0.7817 ± 0.0044 | 0.7857 ± 0.0103 | 0.7548 ± 0.0059 | 0.3419 ± 0.0012 | 0.7418 ± 0.0389 |

@@ -1,0 +1,140 @@
+{
+  "alignment_checks": {
+    "Monday-WorkingHours.pcap_ISCX.csv": {
+      "ml_rows": 529918,
+      "labelled_rows_raw": 529918,
+      "labelled_rows_nonblank": 529918,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 222799,
+      "time_min": "2017-07-03 08:55:58",
+      "time_max": "2017-07-03 17:01:34"
+    },
+    "Tuesday-WorkingHours.pcap_ISCX.csv": {
+      "ml_rows": 445909,
+      "labelled_rows_raw": 445909,
+      "labelled_rows_nonblank": 445909,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 220766,
+      "time_min": "2017-07-04 08:53:00",
+      "time_max": "2017-07-04 17:00:00"
+    },
+    "Wednesday-workingHours.pcap_ISCX.csv": {
+      "ml_rows": 692703,
+      "labelled_rows_raw": 692703,
+      "labelled_rows_nonblank": 692703,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 227337,
+      "time_min": "2017-07-05 08:42:00",
+      "time_max": "2017-07-05 17:10:00"
+    },
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+      "ml_rows": 288602,
+      "labelled_rows_raw": 288602,
+      "labelled_rows_nonblank": 288602,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 288602,
+      "time_min": "2017-07-06 13:00:00",
+      "time_max": "2017-07-06 17:04:00"
+    },
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+      "ml_rows": 170366,
+      "labelled_rows_raw": 458968,
+      "labelled_rows_nonblank": 170366,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 0,
+      "time_min": "2017-07-06 08:59:00",
+      "time_max": "2017-07-06 12:59:00"
+    },
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+      "ml_rows": 225745,
+      "labelled_rows_raw": 225745,
+      "labelled_rows_nonblank": 225745,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 225745,
+      "time_min": "2017-07-07 15:30:00",
+      "time_max": "2017-07-07 17:02:00"
+    },
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+      "ml_rows": 286467,
+      "labelled_rows_raw": 286467,
+      "labelled_rows_nonblank": 286467,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 286467,
+      "time_min": "2017-07-07 13:00:00",
+      "time_max": "2017-07-07 15:29:00"
+    },
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+      "ml_rows": 191033,
+      "labelled_rows_raw": 191033,
+      "labelled_rows_nonblank": 191033,
+      "same_length": true,
+      "row_match_rate": 1.0,
+      "timestamps_unparsed": 0,
+      "pm_corrected": 0,
+      "time_min": "2017-07-07 08:59:00",
+      "time_max": "2017-07-07 12:59:00"
+    }
+  },
+  "row_order_validity": {
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.9992839973044814,
+      "frac_rows_more_than_60s_behind_running_max": 0.0,
+      "frac_rows_more_than_600s_behind_running_max": 0.0
+    },
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.9999195774011442,
+      "frac_rows_more_than_60s_behind_running_max": 0.0,
+      "frac_rows_more_than_600s_behind_running_max": 0.0
+    },
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.9999597445975396,
+      "frac_rows_more_than_60s_behind_running_max": 0.0,
+      "frac_rows_more_than_600s_behind_running_max": 0.0
+    },
+    "Monday-WorkingHours.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.48204763647864424,
+      "frac_rows_more_than_60s_behind_running_max": 0.6558568968148423,
+      "frac_rows_more_than_600s_behind_running_max": 0.48754932525234906
+    },
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.9999788795793187,
+      "frac_rows_more_than_60s_behind_running_max": 0.0,
+      "frac_rows_more_than_600s_behind_running_max": 0.0
+    },
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.9999665558757107,
+      "frac_rows_more_than_60s_behind_running_max": 0.0,
+      "frac_rows_more_than_600s_behind_running_max": 0.0
+    },
+    "Tuesday-WorkingHours.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.47043837199160105,
+      "frac_rows_more_than_60s_behind_running_max": 0.8294751190749796,
+      "frac_rows_more_than_600s_behind_running_max": 0.733192794477774
+    },
+    "Wednesday-workingHours.pcap_ISCX.csv": {
+      "spearman_pos_vs_time": 0.6558294854438527,
+      "frac_rows_more_than_60s_behind_running_max": 0.9095481692232452,
+      "frac_rows_more_than_600s_behind_running_max": 0.865723404027459
+    }
+  },
+  "proxy_overlap": {
+    "test_jaccard_roworder_vs_forward": 0.8633519313941341,
+    "train_jaccard_roworder_vs_forward": 0.9429913673121417
+  },
+  "rows": 2198315,
+  "dropped_unparseable_ts": 0
+}

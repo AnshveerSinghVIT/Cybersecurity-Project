@@ -1,0 +1,60 @@
+Loading (identical to exp003) ...
+  loaded Monday-WorkingHours.pcap_ISCX.csv: 529,481 (after NaN/Inf drop)
+  loaded Tuesday-WorkingHours.pcap_ISCX.csv: 445,645 (after NaN/Inf drop)
+  loaded Wednesday-workingHours.pcap_ISCX.csv: 691,406 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288,395 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170,231 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225,711 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286,096 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Morning.pcap_ISCX.csv: 190,911 (after NaN/Inf drop)
+  loaded Friday-16-02-2018_TrafficForML_CICFlowMeter.csv: 1,048,574
+  loaded Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv: 1,048,575
+  populations identical to exp003: OK
+fwd_none_rf42: e2e=0.3157 DoS=0.0006 Web=0.0000 FPR=0.00013 (151.1s)
+fwd_none_rf1: e2e=0.3154 DoS=0.0001 Web=0.0000 FPR=0.00013 (145.9s)
+fwd_none_rf2: e2e=0.3155 DoS=0.0002 Web=0.0000 FPR=0.00014 (156.6s)
+fwd_none_xgb42: e2e=0.3751 DoS=0.0000 Web=0.0985 FPR=0.00016 (59.6s)
+fwd_slog_rf42: e2e=0.3155 DoS=0.0004 Web=0.0000 FPR=0.00014 (145.5s)
+fwd_slog_rf1: e2e=0.3157 DoS=0.0006 Web=0.0000 FPR=0.00014 (146.2s)
+fwd_slog_rf2: e2e=0.3154 DoS=0.0001 Web=0.0000 FPR=0.00013 (146.2s)
+fwd_slog_xgb42: e2e=0.3751 DoS=0.0000 Web=0.0985 FPR=0.00016 (56.0s)
+fwd_robust_domain_rf42: e2e=0.3153 DoS=0.0000 Web=0.0000 FPR=0.00000 (145.2s)
+fwd_robust_domain_rf1: e2e=0.3153 DoS=0.0000 Web=0.0000 FPR=0.00000 (151.5s)
+fwd_robust_domain_rf2: e2e=0.3153 DoS=0.0000 Web=0.0000 FPR=0.00000 (146.5s)
+fwd_robust_domain_xgb42: e2e=0.3153 DoS=0.0000 Web=0.0000 FPR=0.00000 (57.5s)
+fwd_quantile_domain_rf42: e2e=0.3145 DoS=0.0000 Web=0.0000 FPR=0.00521 (147.7s)
+fwd_quantile_domain_rf1: e2e=0.3145 DoS=0.0000 Web=0.0000 FPR=0.00516 (146.0s)
+fwd_quantile_domain_rf2: e2e=0.3135 DoS=0.0000 Web=0.0000 FPR=0.01101 (156.4s)
+fwd_quantile_domain_xgb42: e2e=0.3740 DoS=0.0940 Web=0.0000 FPR=0.00043 (61.2s)
+fwd_drop_k10_rf42: e2e=0.3251 DoS=0.0000 Web=0.0149 FPR=0.00015 (155.9s)
+fwd_drop_k10_rf1: e2e=0.3153 DoS=0.0000 Web=0.0000 FPR=0.00013 (156.2s)
+fwd_drop_k10_rf2: e2e=0.3153 DoS=0.0000 Web=0.0000 FPR=0.00014 (149.1s)
+fwd_drop_k10_xgb42: e2e=0.4662 DoS=0.0000 Web=0.2925 FPR=0.00018 (59.0s)
+fwd_drop_k25_rf42: e2e=0.3162 DoS=0.0013 Web=0.0000 FPR=0.00017 (97.7s)
+fwd_drop_k25_rf1: e2e=0.3162 DoS=0.0014 Web=0.0000 FPR=0.00016 (91.2s)
+fwd_drop_k25_rf2: e2e=0.3162 DoS=0.0014 Web=0.0000 FPR=0.00016 (90.2s)
+fwd_drop_k25_xgb42: e2e=0.3772 DoS=0.0007 Web=0.1015 FPR=0.00032 (36.0s)
+upper2018_none_rf42: e2e=0.9462 DoS=1.0000 Web=0.7647 FPR=0.00002 (44.4s)
+upper2018_none_rf1: e2e=0.9593 DoS=1.0000 Web=0.7941 FPR=0.00001 (44.2s)
+upper2018_none_rf2: e2e=0.9399 DoS=1.0000 Web=0.7353 FPR=0.00002 (45.0s)
+upper2018_none_xgb42: e2e=0.8670 DoS=1.0000 Web=0.8529 FPR=0.00027 (20.7s)
+rev_none_rf42: e2e=0.3373 DoS=0.0314 Web=0.0000 FPR=0.00503 (51.5s)
+rev_quantile_domain_rf42: e2e=0.3179 DoS=0.0000 Web=0.0000 FPR=0.00009 (70.0s)
+| Direction | Transform | Model | n | Ref E2E F1 | Cross E2E F1 | Gap recovered | DoS recall | Web recall | Benign FPR | Stage2 GT F1 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2017->2018 | drop_k10 | rf | 3 | 0.7996 ± 0.0020 | 0.3186 ± 0.0057 | 0.5% | 0.0000 ± 0.0000 | 0.0050 ± 0.0086 | 0.0139 ± 0.0009% | 0.5606 ± 0.0527 |
+| 2017->2018 | drop_k10 | xgb | 1 | 0.8714 | 0.4662 | 15.5% | 0.0000 | 0.2925 | 0.0177% | 0.5340 |
+| 2017->2018 | drop_k25 | rf | 3 | 0.7813 ± 0.0035 | 0.3162 ± 0.0000 | 0.1% | 0.0013 ± 0.0000 | 0.0000 ± 0.0000 | 0.0163 ± 0.0003% | 0.3525 ± 0.0029 |
+| 2017->2018 | drop_k25 | xgb | 1 | 0.7736 | 0.3772 | 0.4% | 0.0007 | 0.1015 | 0.0317% | 0.3036 |
+| 2017->2018 | none | rf | 3 | 0.9479 ± 0.0017 | 0.3155 ± 0.0002 | 0.0% | 0.0003 ± 0.0003 | 0.0000 ± 0.0000 | 0.0133 ± 0.0005% | 0.7984 ± 0.0495 |
+| 2017->2018 | none | xgb | 1 | 0.9612 | 0.3751 | 0.0% | 0.0000 | 0.0985 | 0.0162% | 0.5532 |
+| 2017->2018 | quantile_domain | rf | 3 | 0.9478 ± 0.0020 | 0.3141 ± 0.0006 | -0.2% | 0.0000 ± 0.0000 | 0.0000 ± 0.0000 | 0.7127 ± 0.3365% | 0.5014 ± 0.0017 |
+| 2017->2018 | quantile_domain | xgb | 1 | 0.9577 | 0.3740 | -0.2% | 0.0940 | 0.0000 | 0.0428% | 0.5733 |
+| 2017->2018 | robust_domain | rf | 3 | 0.9482 ± 0.0026 | 0.3153 ± 0.0000 | -0.0% | 0.0000 ± 0.0000 | 0.0000 ± 0.0000 | 0.0000 ± 0.0000% | 0.6330 ± 0.1199 |
+| 2017->2018 | robust_domain | xgb | 1 | 0.9612 | 0.3153 | -10.2% | 0.0000 | 0.0000 | 0.0000% | 0.5460 |
+| 2017->2018 | slog | rf | 3 | 0.9480 ± 0.0019 | 0.3156 ± 0.0002 | 0.0% | 0.0004 ± 0.0003 | 0.0000 ± 0.0000 | 0.0136 ± 0.0003% | 0.7333 ± 0.0350 |
+| 2017->2018 | slog | xgb | 1 | 0.9614 | 0.3751 | 0.0% | 0.0000 | 0.0985 | 0.0159% | 0.5506 |
+| 2018->2017 | none | rf | 1 | - | 0.3373 | - | 0.0314 | 0.0000 | 0.5026% | 0.4964 |
+| 2018->2017 | quantile_domain | rf | 1 | - | 0.3179 | - | 0.0000 | 0.0000 | 0.0086% | 0.4963 |
+| 2018->2018 | none | rf | 3 | - | 0.9485 ± 0.0099 | - | 1.0000 ± 0.0000 | 0.7647 ± 0.0294 | 0.0016 ± 0.0007% | 1.0000 ± 0.0000 |
+| 2018->2018 | none | xgb | 1 | - | 0.8670 | - | 1.0000 | 0.8529 | 0.0267% | 1.0000 |

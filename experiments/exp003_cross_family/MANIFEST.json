@@ -1,0 +1,44 @@
+{
+  "experiment_id": "exp003_cross_family",
+  "depends_on": [
+    "exp001_baseline",
+    "exp002_seeds"
+  ],
+  "description": "Matched-family (Benign, DoS/DDoS, Web Attack) cross-dataset 2017->2018 vs 2017->2017 reference",
+  "scripts": {
+    "exp003_cross_family.py": "4cf532be0b5967e76a1a369d8216a87b4441682a561265a279dc1b66f39ffba4",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp003_cross_family.py --seeds 42 1 2 3 4 --trees 100",
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "seed_meaning": "RF random_state only; temporal split is deterministic",
+  "model": "RandomForest(n_estimators=100,max_depth=20,class_weight=balanced)",
+  "dedup_policy": "drop_conflicts on both datasets (2017 hash over its 76 features as in exp001/002; 2018 hash over the aligned features)",
+  "class_mapping": "2018 labels -> 2017 raw labels via ids_common.LABEL_2018_TO_2017, then ids_common.FAMILY",
+  "feature_alignment": "ids_common.ALIAS_2018_TO_2017 (same as notebook); 2017 names and order",
+  "runtime_sec": 1019.1,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "cm_e2e_ref_vs_cross_seed42.png": "df53dc21bfabb672a00ba63888f0fb429077c8ff2c4ff4356d9440154bef0fe1",
+    "data_prep.json": "b7711e09c22822b49582b25c329ffc4396759d672f708883a5c3104196761bb8",
+    "run.log": "b7a970bb371cf71c17b880d9ee9abd13e41470d331d13590678a1959fce8ae62",
+    "run_seed1.json": "37bfc8e3b30b2543453589d6fbc5494217c147771cb74363d43783f73364bf4b",
+    "run_seed2.json": "464c7b19fbac7e74c0a8ee8c9d6162e906a80a57fd2f26c8145d1788af788c39",
+    "run_seed3.json": "acd1129a4398ccaa6a88b9eeabc9c58e6372bc31068df7af2f317892d63831c0",
+    "run_seed4.json": "454e4f001481454acc061cd4fed2e295215907c0ac322f585b0d8ec502947aa2",
+    "run_seed42.json": "d95db9c289c458828c35f499beb6f9c10d36a2f9e37c31fc1aa9c04a544cce9e",
+    "summary.json": "d3ef478e58b3049ac7048dae190d9c70b82384cbdc7d2bbf584ef1f7e95b9719",
+    "summary.md": "9dfc666c83051f6809bebefbe79b71e754bef99817c76f825903f81bfacdfa23"
+  }
+}

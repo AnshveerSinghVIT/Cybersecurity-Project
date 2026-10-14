@@ -1,0 +1,25 @@
+  loaded Monday-WorkingHours.pcap_ISCX.csv: 529,481 (after NaN/Inf drop)
+  loaded Tuesday-WorkingHours.pcap_ISCX.csv: 445,645 (after NaN/Inf drop)
+  loaded Wednesday-workingHours.pcap_ISCX.csv: 691,406 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288,395 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170,231 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225,711 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286,096 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Morning.pcap_ISCX.csv: 190,911 (after NaN/Inf drop)
+  [OK] rows_raw: expected=2830743 got=2830743
+  [OK] rows_after_nan_inf_drop: expected=2827876 got=2827876
+  [OK] n_features: expected=76 got=76
+  [OK] unique_feature_rows: expected=2198624 got=2198624
+  [OK] conflicting_groups: expected=309 got=309
+  [OK] rows_in_conflicting_groups: expected=82704 got=82704
+  [OK] conflict_rows_by_label: expected={'PortScan': 76265, 'DoS Hulk': 4990, 'BENIGN': 1239, 'Bot': 202, 'DDoS': 6, 'DoS slowloris': 2} got={'PortScan': 76265, 'DoS Hulk': 4990, 'BENIGN': 1239, 'Bot': 202, 'DDoS': 6, 'DoS slowloris': 2}
+  [OK] rows_after_dedup: expected=2198315 got=2198315
+  [OK] label_support_after_dedup: expected={'BENIGN': 1862156, 'DoS Hulk': 172688, 'DDoS': 128011, 'DoS GoldenEye': 10275, 'FTP-Patator': 5931, 'DoS slowloris': 5370, 'DoS Slowhttptest': 5228, 'SSH-Patator': 3219, 'PortScan': 1850, 'Web Attack - Brute Force': 1470, 'Bot': 1397, 'Web Attack - XSS': 652, 'Infiltration': 36, 'Web Attack - Sql Injection': 21, 'Heartbleed': 11} got={'BENIGN': 1862156, 'DoS Hulk': 172688, 'DDoS': 128011, 'DoS GoldenEye': 10275, 'FTP-Patator': 5931, 'DoS slowloris': 5370, 'DoS Slowhttptest': 5228, 'SSH-Patator': 3219, 'PortScan': 1850, 'Web Attack - Brute Force': 1470, 'Bot': 1397, 'Web Attack - XSS': 652, 'Infiltration': 36, 'Web Attack - Sql Injection': 21, 'Heartbleed': 11}
+  [OK] train_rows: expected=1736669 got=1736669
+  [OK] test_rows: expected=439670 got=439670
+  [OK] stage1_macro_f1: expected=0.9420741075574746 got=0.9420741075574746
+  [OK] family_gt_malicious_macro_f1: expected=0.8449597385213369 got=0.8449597385213369
+  [OK] family_end_to_end_macro_f1: expected=0.7785518328486443 got=0.7785518328486443
+  [OK] fine_gt_malicious_macro_f1: expected=0.778469159841447 got=0.778469159841447
+  [OK] fine_end_to_end_macro_f1: expected=0.7506321449006159 got=0.7506321449006159
+GATE PASSED

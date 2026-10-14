@@ -1,0 +1,144 @@
+{
+  "gate": "loader_equivalence",
+  "passed": true,
+  "checks": {
+    "rows_raw": {
+      "expected": 2830743,
+      "got": 2830743,
+      "ok": true
+    },
+    "rows_after_nan_inf_drop": {
+      "expected": 2827876,
+      "got": 2827876,
+      "ok": true
+    },
+    "n_features": {
+      "expected": 76,
+      "got": 76,
+      "ok": true
+    },
+    "unique_feature_rows": {
+      "expected": 2198624,
+      "got": 2198624,
+      "ok": true
+    },
+    "conflicting_groups": {
+      "expected": 309,
+      "got": 309,
+      "ok": true
+    },
+    "rows_in_conflicting_groups": {
+      "expected": 82704,
+      "got": 82704,
+      "ok": true
+    },
+    "conflict_rows_by_label": {
+      "expected": {
+        "PortScan": 76265,
+        "DoS Hulk": 4990,
+        "BENIGN": 1239,
+        "Bot": 202,
+        "DDoS": 6,
+        "DoS slowloris": 2
+      },
+      "got": {
+        "PortScan": 76265,
+        "DoS Hulk": 4990,
+        "BENIGN": 1239,
+        "Bot": 202,
+        "DDoS": 6,
+        "DoS slowloris": 2
+      },
+      "ok": true
+    },
+    "rows_after_dedup": {
+      "expected": 2198315,
+      "got": 2198315,
+      "ok": true
+    },
+    "label_support_after_dedup": {
+      "expected": {
+        "BENIGN": 1862156,
+        "DoS Hulk": 172688,
+        "DDoS": 128011,
+        "DoS GoldenEye": 10275,
+        "FTP-Patator": 5931,
+        "DoS slowloris": 5370,
+        "DoS Slowhttptest": 5228,
+        "SSH-Patator": 3219,
+        "PortScan": 1850,
+        "Web Attack - Brute Force": 1470,
+        "Bot": 1397,
+        "Web Attack - XSS": 652,
+        "Infiltration": 36,
+        "Web Attack - Sql Injection": 21,
+        "Heartbleed": 11
+      },
+      "got": {
+        "BENIGN": 1862156,
+        "DoS Hulk": 172688,
+        "DDoS": 128011,
+        "DoS GoldenEye": 10275,
+        "FTP-Patator": 5931,
+        "DoS slowloris": 5370,
+        "DoS Slowhttptest": 5228,
+        "SSH-Patator": 3219,
+        "PortScan": 1850,
+        "Web Attack - Brute Force": 1470,
+        "Bot": 1397,
+        "Web Attack - XSS": 652,
+        "Infiltration": 36,
+        "Web Attack - Sql Injection": 21,
+        "Heartbleed": 11
+      },
+      "ok": true
+    },
+    "train_rows": {
+      "expected": 1736669,
+      "got": 1736669,
+      "ok": true
+    },
+    "test_rows": {
+      "expected": 439670,
+      "got": 439670,
+      "ok": true
+    },
+    "stage1_macro_f1": {
+      "expected": 0.9420741075574746,
+      "got": 0.9420741075574746,
+      "ok": true
+    },
+    "family_gt_malicious_macro_f1": {
+      "expected": 0.8449597385213369,
+      "got": 0.8449597385213369,
+      "ok": true
+    },
+    "family_end_to_end_macro_f1": {
+      "expected": 0.7785518328486443,
+      "got": 0.7785518328486443,
+      "ok": true
+    },
+    "fine_gt_malicious_macro_f1": {
+      "expected": 0.778469159841447,
+      "got": 0.778469159841447,
+      "ok": true
+    },
+    "fine_end_to_end_macro_f1": {
+      "expected": 0.7506321449006159,
+      "got": 0.7506321449006159,
+      "ok": true
+    }
+  },
+  "dedup_content_fingerprint_xor": 4870461624788902816,
+  "runtime_sec": 237.0,
+  "code": {
+    "verify_loader.py": "0be5b7d02762cfb950c19c7e0af5bb7ef12364a85f44076b7d13236151a85921",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  }
+}

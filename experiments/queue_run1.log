@@ -1,0 +1,6 @@
+[2026-10-14T19:46:11] queue start (pid 24104), keep_awake=True
+[2026-10-14T19:46:11] fingerprinting sources, exp001 artifacts and datasets ...
+[2026-10-14T19:46:14] START gate_loader_equivalence: verify_loader.py
+[2026-10-14T19:50:19] DONE gate_loader_equivalence in 245s, peak 4.13 GB
+[2026-10-14T19:50:19] START exp003_cross_family: exp003_cross_family.py --seeds 42 1 2 3 4
+[2026-10-14T20:00:41] queue end. stop_reason=None not_run=['exp005_dedup_sensitivity', 'exp004_leakage_vs_drift'] datasets_unchanged=True sources_unchanged=True exp001_unchanged=True

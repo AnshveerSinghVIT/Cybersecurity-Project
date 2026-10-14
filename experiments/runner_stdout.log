@@ -1,0 +1,12 @@
+[2026-10-14T20:30:53] queue start (pid 5760), keep_awake=True
+[2026-10-14T20:30:53] fingerprinting sources, exp001 artifacts and datasets ...
+[2026-10-14T20:30:56] precondition OK: ids_common.py identical to the gate-verified revision
+[2026-10-14T20:30:56] START exp006_shift_diagnosis: exp006_shift_diagnosis.py
+[2026-10-14T20:35:46] DONE exp006_shift_diagnosis in 290s, peak 5.66 GB
+[2026-10-14T20:35:46] START exp007_shift_mitigation: exp007_shift_mitigation.py
+[2026-10-14T21:32:57] DONE exp007_shift_mitigation in 3431s, peak 5.51 GB
+[2026-10-14T21:32:57] START exp004_leakage_vs_drift: exp004_leakage_vs_drift.py --seeds 42 1
+[2026-10-14T21:59:44] DONE exp004_leakage_vs_drift in 1607s, peak 4.4 GB
+[2026-10-14T21:59:44] START exp005_dedup_sensitivity: exp005_dedup_sensitivity.py --seeds 42
+[2026-10-14T22:20:36] DONE exp005_dedup_sensitivity in 1251s, peak 5.45 GB
+[2026-10-14T22:20:38] queue end. stop_reason=None not_run=[] datasets_unchanged=True sources_unchanged=True exp001_unchanged=True

@@ -1,0 +1,5 @@
+| 2018 test policy | n test | Malicious F1 | E2E macro-F1 | DoS recall | Web recall | Benign FPR | per raw label recall (seed 42) |
+|---|---|---|---|---|---|---|---|
+| drop_conflicts | 1,420,219 | 0.0006 ± 0.0005 | 0.3155 ± 0.0002 | 0.0003 ± 0.0003 | 0.0000 ± 0.0000 | 0.0133 ± 0.0005% | DoS Hulk 0.001 (n=145,199); DoS Slowhttptest 0.000 (n=55); Web Attack - Brute Force 0.000 (n=225); Web Attack - Sql Injection 0.000 (n=31); Web Attack - XSS 0.000 (n=79) |
+| keep_first | 1,420,222 | 0.0006 ± 0.0005 | 0.3155 ± 0.0002 | 0.0003 ± 0.0003 | 0.0000 ± 0.0000 | 0.0133 ± 0.0005% | DoS Hulk 0.001 (n=145,199); DoS Slowhttptest 0.000 (n=55); Web Attack - Brute Force 0.000 (n=228); Web Attack - Sql Injection 0.000 (n=31); Web Attack - XSS 0.000 (n=79) |
+| none | 2,091,539 | 0.0087 ± 0.0078 | 0.2804 ± 0.0028 | 0.0044 ± 0.0039 | 0.0000 ± 0.0000 | 0.0114 ± 0.0004% | DoS Hulk 0.011 (n=461,912); DoS Slowhttptest 0.000 (n=139,890); Web Attack - Brute Force 0.000 (n=249); Web Attack - Sql Injection 0.000 (n=34); Web Attack - XSS 0.000 (n=79) |

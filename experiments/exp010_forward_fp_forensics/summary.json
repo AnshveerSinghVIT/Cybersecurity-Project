@@ -1,0 +1,445 @@
+{
+  "ddos_label_interval": [
+    "2017-07-07 15:56:00",
+    "2017-07-07 16:16:00"
+  ],
+  "all_ddos_rows_src_dst": {
+    "172.16.0.1>192.168.10.50": 128008,
+    "192.168.10.50>172.16.0.1": 3
+  },
+  "forward": {
+    "reproduction": {
+      "benign_fp": [
+        10612,
+        10612
+      ],
+      "benign_row_fine": [
+        {
+          "DDoS": 9685,
+          "Bot": 803,
+          "DoS Hulk": 66,
+          "DoS Slowhttptest": 48,
+          "DoS GoldenEye": 6,
+          "Web Attack - Brute Force": 2,
+          "PortScan": 2
+        },
+        {
+          "Bot": 803,
+          "DDoS": 9685,
+          "DoS GoldenEye": 6,
+          "DoS Hulk": 66,
+          "DoS Slowhttptest": 48,
+          "PortScan": 2,
+          "Web Attack - Brute Force": 2
+        }
+      ]
+    },
+    "test_rows": 439670,
+    "benign_test_flows": 372432,
+    "benign_fp": 10612,
+    "fp_by_predicted_fine": {
+      "DDoS": 9685,
+      "Bot": 803,
+      "DoS Hulk": 66,
+      "DoS Slowhttptest": 48,
+      "DoS GoldenEye": 6,
+      "Web Attack - Brute Force": 2,
+      "PortScan": 2
+    },
+    "benign_on_ddos_pair": 31515,
+    "benign_on_ddos_pair_in_ddos_interval": 31340,
+    "benign_on_bot_cc": 966,
+    "fp_on_ddos_pair": 9685,
+    "fp_on_ddos_pair_pred_ddos": 9680,
+    "fp_on_bot_cc": 802,
+    "fp_on_bot_cc_pred_bot": 802,
+    "malicious_on_ddos_pair_by_label": {
+      "DoS Hulk": 34538,
+      "DDoS": 25603,
+      "DoS GoldenEye": 2055,
+      "FTP-Patator": 1187,
+      "DoS slowloris": 1074,
+      "DoS Slowhttptest": 1046,
+      "SSH-Patator": 644,
+      "PortScan": 370,
+      "Web Attack - Brute Force": 294,
+      "Web Attack - XSS": 131,
+      "Web Attack - Sql Injection": 5
+    },
+    "malicious_on_bot_cc_by_label": {
+      "Bot": 280
+    },
+    "stage1_all": {
+      "precision": 0.8584198308295755,
+      "recall": 0.9569291174633392,
+      "f1": 0.9050016878586701,
+      "fpr": 0.02849379215534648,
+      "benign_n": 372432,
+      "benign_fp": 10612,
+      "fpr_ci95": [
+        0.027964280512416045,
+        0.029033030779655907
+      ]
+    },
+    "stage1_excl_ddos_pair_benign": {
+      "precision": 0.9857972391181112,
+      "recall": 0.9569291174633392,
+      "f1": 0.9711486940312587,
+      "fpr": 0.0027191369160235483,
+      "benign_n": 340917,
+      "benign_fp": 927,
+      "fpr_ci95": [
+        0.002549845749439117,
+        0.002899635107409736
+      ]
+    },
+    "stage1_excl_both_benign": {
+      "precision": 0.998061023469372,
+      "recall": 0.9569291174633392,
+      "f1": 0.9770623742454728,
+      "fpr": 0.00036770005088968704,
+      "benign_n": 339951,
+      "benign_fp": 125,
+      "fpr_ci95": [
+        0.00030865077668596743,
+        0.00043804133925888153
+      ]
+    },
+    "fp_to_ddos_by_hour": {
+      "2017-07-06 16:00:00": 1,
+      "2017-07-07 11:00:00": 1,
+      "2017-07-07 13:00:00": 1,
+      "2017-07-07 15:00:00": 1564,
+      "2017-07-07 16:00:00": 8118
+    },
+    "fp_to_ddos_in_ddos_interval": 9681,
+    "benign_fpr_inside_ddos_interval": 0.20450308932872552,
+    "benign_fpr_outside_ddos_interval": 0.0026117460816109054,
+    "fp_to_ddos_top_src_dst": [
+      {
+        "key": [
+          "192.168.10.50",
+          "172.16.0.1"
+        ],
+        "n": 9680
+      },
+      {
+        "key": [
+          "192.168.10.12",
+          "204.154.111.111"
+        ],
+        "n": 1
+      },
+      {
+        "key": [
+          "192.168.10.12",
+          "204.154.111.113"
+        ],
+        "n": 1
+      },
+      {
+        "key": [
+          "192.168.10.16",
+          "54.225.255.135"
+        ],
+        "n": 1
+      },
+      {
+        "key": [
+          "52.198.236.120",
+          "192.168.10.14"
+        ],
+        "n": 1
+      },
+      {
+        "key": [
+          "95.213.11.181",
+          "192.168.10.9"
+        ],
+        "n": 1
+      }
+    ],
+    "fp_to_ddos_dst_port_ge_1024_frac": 0.9996902426432628,
+    "true_ddos_test_top_src_dst": [
+      {
+        "key": [
+          "172.16.0.1",
+          "192.168.10.50"
+        ],
+        "n": 25603
+      }
+    ],
+    "true_ddos_test_dst_port_eq_80_frac": 1.0,
+    "fp_to_bot_top_src_dst": [
+      {
+        "key": [
+          "192.168.10.8",
+          "205.174.165.73"
+        ],
+        "n": 231
+      },
+      {
+        "key": [
+          "192.168.10.15",
+          "205.174.165.73"
+        ],
+        "n": 230
+      },
+      {
+        "key": [
+          "192.168.10.9",
+          "205.174.165.73"
+        ],
+        "n": 116
+      },
+      {
+        "key": [
+          "192.168.10.14",
+          "205.174.165.73"
+        ],
+        "n": 116
+      },
+      {
+        "key": [
+          "192.168.10.5",
+          "205.174.165.73"
+        ],
+        "n": 109
+      },
+      {
+        "key": [
+          "192.168.10.12",
+          "50.19.127.216"
+        ],
+        "n": 1
+      }
+    ],
+    "fp_to_bot_top_dst_port": [
+      {
+        "key": [
+          "8080"
+        ],
+        "n": 802
+      },
+      {
+        "key": [
+          "80"
+        ],
+        "n": 1
+      }
+    ],
+    "fp_to_bot_by_hour": {
+      "2017-07-07 11:00:00": 1,
+      "2017-07-07 13:00:00": 244,
+      "2017-07-07 14:00:00": 245,
+      "2017-07-07 15:00:00": 249,
+      "2017-07-07 16:00:00": 64
+    },
+    "true_bot_test_top_src_dst": [
+      {
+        "key": [
+          "192.168.10.15",
+          "205.174.165.73"
+        ],
+        "n": 80
+      },
+      {
+        "key": [
+          "192.168.10.8",
+          "205.174.165.73"
+        ],
+        "n": 80
+      },
+      {
+        "key": [
+          "192.168.10.14",
+          "205.174.165.73"
+        ],
+        "n": 40
+      },
+      {
+        "key": [
+          "192.168.10.5",
+          "205.174.165.73"
+        ],
+        "n": 40
+      },
+      {
+        "key": [
+          "192.168.10.9",
+          "205.174.165.73"
+        ],
+        "n": 40
+      }
+    ],
+    "true_bot_test_top_dst_port": [
+      {
+        "key": [
+          "8080"
+        ],
+        "n": 280
+      }
+    ],
+    "true_bot_test_window": [
+      "2017-07-07 11:53:00",
+      "2017-07-07 12:59:00"
+    ],
+    "benign_test_top_src_dst": [
+      {
+        "key": [
+          "192.168.10.3",
+          "192.168.10.1"
+        ],
+        "n": 57037
+      },
+      {
+        "key": [
+          "192.168.10.50",
+          "172.16.0.1"
+        ],
+        "n": 31476
+      },
+      {
+        "key": [
+          "192.168.10.12",
+          "192.168.10.3"
+        ],
+        "n": 14445
+      },
+      {
+        "key": [
+          "192.168.10.15",
+          "192.168.10.3"
+        ],
+        "n": 14249
+      },
+      {
+        "key": [
+          "192.168.10.19",
+          "192.168.10.3"
+        ],
+        "n": 13421
+      },
+      {
+        "key": [
+          "192.168.10.9",
+          "192.168.10.3"
+        ],
+        "n": 13373
+      },
+      {
+        "key": [
+          "192.168.10.5",
+          "192.168.10.3"
+        ],
+        "n": 12926
+      },
+      {
+        "key": [
+          "192.168.10.14",
+          "192.168.10.3"
+        ],
+        "n": 11577
+      }
+    ]
+  },
+  "random": {
+    "reproduction": {
+      "benign_fp": [
+        254,
+        254
+      ],
+      "benign_row_fine": [
+        {
+          "Bot": 116,
+          "DoS Hulk": 64,
+          "DoS Slowhttptest": 54,
+          "DDoS": 13,
+          "Web Attack - Brute Force": 3,
+          "PortScan": 2,
+          "DoS GoldenEye": 2
+        },
+        {
+          "Bot": 116,
+          "DDoS": 13,
+          "DoS GoldenEye": 2,
+          "DoS Hulk": 64,
+          "DoS Slowhttptest": 54,
+          "PortScan": 2,
+          "Web Attack - Brute Force": 3
+        }
+      ]
+    },
+    "test_rows": 439663,
+    "benign_test_flows": 372431,
+    "benign_fp": 254,
+    "fp_by_predicted_fine": {
+      "Bot": 116,
+      "DoS Hulk": 64,
+      "DoS Slowhttptest": 54,
+      "DDoS": 13,
+      "Web Attack - Brute Force": 3,
+      "PortScan": 2,
+      "DoS GoldenEye": 2
+    },
+    "benign_on_ddos_pair": 7620,
+    "benign_on_ddos_pair_in_ddos_interval": 6287,
+    "benign_on_bot_cc": 179,
+    "fp_on_ddos_pair": 4,
+    "fp_on_ddos_pair_pred_ddos": 0,
+    "fp_on_bot_cc": 116,
+    "fp_on_bot_cc_pred_bot": 116,
+    "malicious_on_ddos_pair_by_label": {
+      "DoS Hulk": 34538,
+      "DDoS": 25602,
+      "DoS GoldenEye": 2055,
+      "FTP-Patator": 1186,
+      "DoS slowloris": 1074,
+      "DoS Slowhttptest": 1046,
+      "SSH-Patator": 644,
+      "PortScan": 370,
+      "Web Attack - Brute Force": 294,
+      "Web Attack - XSS": 130,
+      "Web Attack - Sql Injection": 4
+    },
+    "malicious_on_bot_cc_by_label": {
+      "Bot": 243
+    },
+    "stage1_all": {
+      "precision": 0.9962247885732971,
+      "recall": 0.9969508567348881,
+      "f1": 0.9965876904091054,
+      "fpr": 0.0006820055258557961,
+      "benign_n": 372431,
+      "benign_fp": 254,
+      "fpr_ci95": [
+        0.000603152951612528,
+        0.0007711588549872549
+      ]
+    },
+    "stage1_excl_ddos_pair_benign": {
+      "precision": 0.9962840197987425,
+      "recall": 0.9969508567348881,
+      "f1": 0.996617326721632,
+      "fpr": 0.0006852863537557804,
+      "benign_n": 364811,
+      "benign_fp": 250,
+      "fpr_ci95": [
+        0.0006054622364213586,
+        0.0007756263119234905
+      ]
+    },
+    "stage1_excl_both_benign": {
+      "precision": 0.9980047944491595,
+      "recall": 0.9969508567348881,
+      "f1": 0.9974775471936782,
+      "fpr": 0.00036749380197020556,
+      "benign_n": 364632,
+      "benign_fp": 134,
+      "fpr_ci95": [
+        0.0003103237252266296,
+        0.00043519157795140004
+      ]
+    }
+  }
+}

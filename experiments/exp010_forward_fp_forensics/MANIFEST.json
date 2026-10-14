@@ -1,0 +1,27 @@
+{
+  "experiment_id": "exp010_forward_fp_forensics",
+  "depends_on": [
+    "exp004_leakage_vs_drift"
+  ],
+  "description": "Timing and endpoints of benign false positives under the per-class forward and random splits (re-fits of exp004 seed 42, reproduction-checked)",
+  "scripts": {
+    "exp010_forward_fp_forensics.py": "eadbffb492d34e8cd94f19a60be990455a6c05b37410a7c43c10af6745420087",
+    "exp004_leakage_vs_drift.py": "0679f8512315844add59898b91e7d067ced08f9beac0a3040dad83e34d27cae5",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp010_forward_fp_forensics.py",
+  "seeds": [
+    42
+  ],
+  "dedup_policy": "drop_conflicts",
+  "runtime_sec": 260.3,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "summary.json": "8a19abcd3413c0a65a8f5c70812a4f8984033a7b958a3d27a108cd480c51a62c"
+  }
+}

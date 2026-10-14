@@ -1,0 +1,44 @@
+  loaded Monday-WorkingHours.pcap_ISCX.csv: 529,481 (after NaN/Inf drop)
+  loaded Tuesday-WorkingHours.pcap_ISCX.csv: 445,645 (after NaN/Inf drop)
+  loaded Wednesday-workingHours.pcap_ISCX.csv: 691,406 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288,395 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170,231 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225,711 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286,096 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Morning.pcap_ISCX.csv: 190,911 (after NaN/Inf drop)
+  loaded Friday-16-02-2018_TrafficForML_CICFlowMeter.csv: 1,048,574
+  loaded Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv: 1,048,575
+supports: {
+ "drop_conflicts": {
+  "BENIGN": 1274630,
+  "DoS Hulk": 145199,
+  "Web Attack - Brute Force": 225,
+  "Web Attack - XSS": 79,
+  "DoS Slowhttptest": 55,
+  "Web Attack - Sql Injection": 31
+ },
+ "keep_first": {
+  "BENIGN": 1274630,
+  "DoS Hulk": 145199,
+  "Web Attack - Brute Force": 228,
+  "Web Attack - XSS": 79,
+  "DoS Slowhttptest": 55,
+  "Web Attack - Sql Injection": 31
+ },
+ "none": {
+  "BENIGN": 1489375,
+  "DoS Hulk": 461912,
+  "DoS Slowhttptest": 139890,
+  "Web Attack - Brute Force": 249,
+  "Web Attack - XSS": 79,
+  "Web Attack - Sql Injection": 34
+ }
+}
+seed 42: drop_conflicts: e2e=0.3157 malF1=0.0012 DoS=0.0006 | keep_first: e2e=0.3157 malF1=0.0012 DoS=0.0006 | none: e2e=0.2834 malF1=0.0171 DoS=0.0086
+seed 1: drop_conflicts: e2e=0.3154 malF1=0.0002 DoS=0.0001 | keep_first: e2e=0.3154 malF1=0.0002 DoS=0.0001 | none: e2e=0.2779 malF1=0.0018 DoS=0.0009
+seed 2: drop_conflicts: e2e=0.3155 malF1=0.0005 DoS=0.0002 | keep_first: e2e=0.3155 malF1=0.0005 DoS=0.0002 | none: e2e=0.2798 malF1=0.0072 DoS=0.0036
+| 2018 test policy | n test | Malicious F1 | E2E macro-F1 | DoS recall | Web recall | Benign FPR | per raw label recall (seed 42) |
+|---|---|---|---|---|---|---|---|
+| drop_conflicts | 1,420,219 | 0.0006 ± 0.0005 | 0.3155 ± 0.0002 | 0.0003 ± 0.0003 | 0.0000 ± 0.0000 | 0.0133 ± 0.0005% | DoS Hulk 0.001 (n=145,199); DoS Slowhttptest 0.000 (n=55); Web Attack - Brute Force 0.000 (n=225); Web Attack - Sql Injection 0.000 (n=31); Web Attack - XSS 0.000 (n=79) |
+| keep_first | 1,420,222 | 0.0006 ± 0.0005 | 0.3155 ± 0.0002 | 0.0003 ± 0.0003 | 0.0000 ± 0.0000 | 0.0133 ± 0.0005% | DoS Hulk 0.001 (n=145,199); DoS Slowhttptest 0.000 (n=55); Web Attack - Brute Force 0.000 (n=228); Web Attack - Sql Injection 0.000 (n=31); Web Attack - XSS 0.000 (n=79) |
+| none | 2,091,539 | 0.0087 ± 0.0078 | 0.2804 ± 0.0028 | 0.0044 ± 0.0039 | 0.0000 ± 0.0000 | 0.0114 ± 0.0004% | DoS Hulk 0.011 (n=461,912); DoS Slowhttptest 0.000 (n=139,890); Web Attack - Brute Force 0.000 (n=249); Web Attack - Sql Injection 0.000 (n=34); Web Attack - XSS 0.000 (n=79) |

@@ -1,0 +1,540 @@
+{
+  "seed": 1,
+  "results": {
+    "drop_conflicts": {
+      "n_test": 1420219,
+      "support": {
+        "Benign": 1274630,
+        "DoS/DDoS": 145254,
+        "Web Attack": 335
+      },
+      "stage1": {
+        "malicious_f1": 0.00015092993420826959,
+        "macro_f1": 0.473033057255599,
+        "benign_test_flows": 1274630,
+        "benign_false_positives": 163,
+        "benign_fpr": 0.0001278802476012647
+      },
+      "stage2_gt": {
+        "macro_f1": 0.799991255636195
+      },
+      "end_to_end": {
+        "macro_f1": 0.3153554873950511
+      },
+      "per_family": {
+        "Benign": {
+          "n": 1274630,
+          "stage1_recall": 0.9998721197523988,
+          "stage1_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ],
+          "e2e_recall": 0.9998721197523988,
+          "e2e_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ],
+          "e2e_precision": 0.8974835304514998,
+          "stage2_gt_recall": null
+        },
+        "DoS/DDoS": {
+          "n": 145254,
+          "stage1_recall": 7.572941192669393e-05,
+          "stage1_recall_ci95": [
+            4.228762445185645e-05,
+            0.00013561395879733317
+          ],
+          "e2e_recall": 7.572941192669393e-05,
+          "e2e_recall_ci95": [
+            4.228762445185645e-05,
+            0.00013561395879733317
+          ],
+          "e2e_precision": 0.06321839080459771,
+          "stage2_gt_recall": 0.9996764288763132
+        },
+        "Web Attack": {
+          "n": 335,
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            0.011337450891508009
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            0.011337450891508009
+          ],
+          "e2e_precision": NaN,
+          "stage2_gt_recall": 0.48955223880597015
+        }
+      },
+      "per_raw_label": {
+        "BENIGN": {
+          "n": 1274630,
+          "family": "Benign",
+          "stage1_recall": 0.9998721197523988,
+          "stage1_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ],
+          "e2e_recall": 0.9998721197523988,
+          "e2e_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ]
+        },
+        "DoS Hulk": {
+          "n": 145199,
+          "family": "DoS/DDoS",
+          "stage1_recall": 7.575809750755859e-05,
+          "stage1_recall_ci95": [
+            4.23036427937647e-05,
+            0.0001356653261000231
+          ],
+          "e2e_recall": 7.575809750755859e-05,
+          "e2e_recall_ci95": [
+            4.23036427937647e-05,
+            0.0001356653261000231
+          ]
+        },
+        "DoS Slowhttptest": {
+          "n": 55,
+          "family": "DoS/DDoS",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            0.06528714378942788
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            0.06528714378942788
+          ]
+        },
+        "Web Attack - Brute Force": {
+          "n": 225,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            1.734723475976807e-18,
+            0.016787157579740745
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            1.734723475976807e-18,
+            0.016787157579740745
+          ]
+        },
+        "Web Attack - Sql Injection": {
+          "n": 31,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            -1.3877787807814457e-17,
+            0.11025900073475385
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            -1.3877787807814457e-17,
+            0.11025900073475385
+          ]
+        },
+        "Web Attack - XSS": {
+          "n": 79,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            -3.469446951953614e-18,
+            0.04637283683559951
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            -3.469446951953614e-18,
+            0.04637283683559951
+          ]
+        }
+      },
+      "confusion_e2e": {
+        "labels": [
+          "Benign",
+          "DoS/DDoS",
+          "Web Attack"
+        ],
+        "counts": [
+          [
+            1274467,
+            163,
+            0
+          ],
+          [
+            145243,
+            11,
+            0
+          ],
+          [
+            335,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "keep_first": {
+      "n_test": 1420222,
+      "support": {
+        "Benign": 1274630,
+        "DoS/DDoS": 145254,
+        "Web Attack": 338
+      },
+      "stage1": {
+        "malicious_f1": 0.00015092682792969554,
+        "macro_f1": 0.4730325291561426,
+        "benign_test_flows": 1274630,
+        "benign_false_positives": 163,
+        "benign_fpr": 0.0001278802476012647
+      },
+      "stage2_gt": {
+        "macro_f1": 0.7983447524911143
+      },
+      "end_to_end": {
+        "macro_f1": 0.31535513636417295
+      },
+      "per_family": {
+        "Benign": {
+          "n": 1274630,
+          "stage1_recall": 0.9998721197523988,
+          "stage1_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ],
+          "e2e_recall": 0.9998721197523988,
+          "e2e_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ],
+          "e2e_precision": 0.8974816344236252,
+          "stage2_gt_recall": null
+        },
+        "DoS/DDoS": {
+          "n": 145254,
+          "stage1_recall": 7.572941192669393e-05,
+          "stage1_recall_ci95": [
+            4.228762445185645e-05,
+            0.00013561395879733317
+          ],
+          "e2e_recall": 7.572941192669393e-05,
+          "e2e_recall_ci95": [
+            4.228762445185645e-05,
+            0.00013561395879733317
+          ],
+          "e2e_precision": 0.06321839080459771,
+          "stage2_gt_recall": 0.9996764288763132
+        },
+        "Web Attack": {
+          "n": 338,
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            0.011237953484888905
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            0.011237953484888905
+          ],
+          "e2e_precision": NaN,
+          "stage2_gt_recall": 0.48520710059171596
+        }
+      },
+      "per_raw_label": {
+        "BENIGN": {
+          "n": 1274630,
+          "family": "Benign",
+          "stage1_recall": 0.9998721197523988,
+          "stage1_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ],
+          "e2e_recall": 0.9998721197523988,
+          "e2e_recall_ci95": [
+            0.9998509247009922,
+            0.9998903016894934
+          ]
+        },
+        "DoS Hulk": {
+          "n": 145199,
+          "family": "DoS/DDoS",
+          "stage1_recall": 7.575809750755859e-05,
+          "stage1_recall_ci95": [
+            4.23036427937647e-05,
+            0.0001356653261000231
+          ],
+          "e2e_recall": 7.575809750755859e-05,
+          "e2e_recall_ci95": [
+            4.23036427937647e-05,
+            0.0001356653261000231
+          ]
+        },
+        "DoS Slowhttptest": {
+          "n": 55,
+          "family": "DoS/DDoS",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            0.06528714378942788
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            0.06528714378942788
+          ]
+        },
+        "Web Attack - Brute Force": {
+          "n": 228,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            0.016569933954907145
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            0.016569933954907145
+          ]
+        },
+        "Web Attack - Sql Injection": {
+          "n": 31,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            -1.3877787807814457e-17,
+            0.11025900073475385
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            -1.3877787807814457e-17,
+            0.11025900073475385
+          ]
+        },
+        "Web Attack - XSS": {
+          "n": 79,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            -3.469446951953614e-18,
+            0.04637283683559951
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            -3.469446951953614e-18,
+            0.04637283683559951
+          ]
+        }
+      },
+      "confusion_e2e": {
+        "labels": [
+          "Benign",
+          "DoS/DDoS",
+          "Web Attack"
+        ],
+        "counts": [
+          [
+            1274467,
+            163,
+            0
+          ],
+          [
+            145243,
+            11,
+            0
+          ],
+          [
+            338,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "none": {
+      "n_test": 2091539,
+      "support": {
+        "Benign": 1489375,
+        "DoS/DDoS": 601802,
+        "Web Attack": 362
+      },
+      "stage1": {
+        "malicious_f1": 0.001817955629276384,
+        "macro_f1": 0.41686639698891403,
+        "benign_test_flows": 1489375,
+        "benign_false_positives": 163,
+        "benign_fpr": 0.00010944187998321444
+      },
+      "stage2_gt": {
+        "macro_f1": 0.505045043429398
+      },
+      "end_to_end": {
+        "macro_f1": 0.2779112954121051
+      },
+      "per_family": {
+        "Benign": {
+          "n": 1489375,
+          "stage1_recall": 0.9998905581200168,
+          "stage1_recall_ci95": [
+            0.9998724188596019,
+            0.9999061186146879
+          ],
+          "e2e_recall": 0.9998905581200168,
+          "e2e_recall_ci95": [
+            0.9998724188596019,
+            0.9999061186146879
+          ],
+          "e2e_precision": 0.7122594493664711,
+          "stage2_gt_recall": null
+        },
+        "DoS/DDoS": {
+          "n": 601802,
+          "stage1_recall": 0.0009105985024974992,
+          "stage1_recall_ci95": [
+            0.0008375110875917316,
+            0.0009900577460305708
+          ],
+          "e2e_recall": 0.0009105985024974992,
+          "e2e_recall_ci95": [
+            0.0008375110875917316,
+            0.0009900577460305708
+          ],
+          "e2e_precision": 0.770745428973277,
+          "stage2_gt_recall": 0.9763477024004573
+        },
+        "Web Attack": {
+          "n": 362,
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            0.010500719437045978
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            0.010500719437045978
+          ],
+          "e2e_precision": NaN,
+          "stage2_gt_recall": 0.4530386740331492
+        }
+      },
+      "per_raw_label": {
+        "BENIGN": {
+          "n": 1489375,
+          "family": "Benign",
+          "stage1_recall": 0.9998905581200168,
+          "stage1_recall_ci95": [
+            0.9998724188596019,
+            0.9999061186146879
+          ],
+          "e2e_recall": 0.9998905581200168,
+          "e2e_recall_ci95": [
+            0.9998724188596019,
+            0.9999061186146879
+          ]
+        },
+        "DoS Hulk": {
+          "n": 461912,
+          "family": "DoS/DDoS",
+          "stage1_recall": 0.0011863731619875648,
+          "stage1_recall_ci95": [
+            0.001091162813447791,
+            0.0012898804436752617
+          ],
+          "e2e_recall": 0.0011863731619875648,
+          "e2e_recall_ci95": [
+            0.001091162813447791,
+            0.0012898804436752617
+          ]
+        },
+        "DoS Slowhttptest": {
+          "n": 139890,
+          "family": "DoS/DDoS",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            2.7460822835820955e-05
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            2.7460822835820955e-05
+          ]
+        },
+        "Web Attack - Brute Force": {
+          "n": 249,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            -8.673617379884035e-19,
+            0.01519370230215281
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            -8.673617379884035e-19,
+            0.01519370230215281
+          ]
+        },
+        "Web Attack - Sql Injection": {
+          "n": 34,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            0.0,
+            0.10151790621961015
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            0.0,
+            0.10151790621961015
+          ]
+        },
+        "Web Attack - XSS": {
+          "n": 79,
+          "family": "Web Attack",
+          "stage1_recall": 0.0,
+          "stage1_recall_ci95": [
+            -3.469446951953614e-18,
+            0.04637283683559951
+          ],
+          "e2e_recall": 0.0,
+          "e2e_recall_ci95": [
+            -3.469446951953614e-18,
+            0.04637283683559951
+          ]
+        }
+      },
+      "confusion_e2e": {
+        "labels": [
+          "Benign",
+          "DoS/DDoS",
+          "Web Attack"
+        ],
+        "counts": [
+          [
+            1489212,
+            163,
+            0
+          ],
+          [
+            601254,
+            548,
+            0
+          ],
+          [
+            362,
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  },
+  "runtime_sec": 107.6
+}

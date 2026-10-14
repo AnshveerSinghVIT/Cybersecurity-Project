@@ -1,0 +1,51 @@
+{
+  "experiment_id": "exp001_baseline",
+  "frozen": "2026-10-14",
+  "description": "Single-seed (42) multiclass baseline on CICIDS2017; temporal vs random split control",
+  "script": "multiclass_baseline.py",
+  "script_sha256": "bae0512649be8e30b35eb3b8c389a694d0ad19d9789bf0a410aeac59d0a2d230",
+  "runs": [
+    {
+      "cmd": "python multiclass_baseline.py --split temporal --trees 100 --min-support 500"
+    },
+    {
+      "cmd": "python multiclass_baseline.py --split random --trees 100 --min-support 500"
+    }
+  ],
+  "seed": 42,
+  "model": "RandomForest(n_estimators=100,max_depth=20,class_weight=balanced)",
+  "dedup_policy": "drop every feature-identical group with >1 distinct label; keep first of consistent groups",
+  "split_definitions": {
+    "temporal": "within raw label, chronological (file order Mon..Fri, row order) 80/20, 1% purge gap",
+    "random": "stratified on raw label 80/20, split seed 42"
+  },
+  "class_mapping": "fine: raw labels with >=500 deduped samples, rest -> Other/Rare; family: FAMILY dict in script",
+  "dataset": {
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 77123859,
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 76906168,
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv": 58316725,
+    "Monday-WorkingHours.pcap_ISCX.csv": 176927918,
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": 83102436,
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": 52023263,
+    "Tuesday-WorkingHours.pcap_ISCX.csv": 135078995,
+    "Wednesday-workingHours.pcap_ISCX.csv": 225166395
+  },
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "cm_end_to_end_family_random.png": "10e9742eca24cca8befda2dea3a66129d8c0b3107e7c1bf038ef5605d387ec23",
+    "cm_end_to_end_family_temporal.png": "da1db5f2d7aaa92a86bf2d2f54b4bd839871969599bf86abba9238995d694118",
+    "cm_end_to_end_fine_random.png": "c2e5dd0d1f9d0e03216575c092a5fed9cdcce4178548c59192300c9b14119b2b",
+    "cm_end_to_end_fine_temporal.png": "3cb50781ff203980d6392f077bd757be4d2041fe77c6f3957c64c02f1f1975ba",
+    "cm_stage2_family_gt_random.png": "85046509357196d3f4386cce51bfe6b5d9a5b5aa2c10ec415a7acee5038c19cb",
+    "cm_stage2_family_gt_temporal.png": "10201ee2762c8a100a9e5ca172468502ae6354da7335bcded1693f0f4abeeeab",
+    "cm_stage2_fine_gt_random.png": "cb8ca536601350d025557d960c2b98ea48b89ce206affac75b94f933b82f5216",
+    "cm_stage2_fine_gt_temporal.png": "97369cc1ba3d2c95454f64152c26c50a8bd91ae0dd9e44f2ec66bca41b4111e4",
+    "multiclass_baseline_random.json": "91e09e374e141643d326a5dfb0f4d2b898d7e32b7491b599738e9d57ca52ecda",
+    "multiclass_baseline_temporal.json": "b2d231039a232ae46c97e5863ca8faba8cab82638e860e848d4c204770ec4b05"
+  }
+}

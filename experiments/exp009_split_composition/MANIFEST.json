@@ -1,0 +1,24 @@
+{
+  "experiment_id": "exp009_split_composition",
+  "depends_on": [
+    "exp004_leakage_vs_drift"
+  ],
+  "description": "Time composition of the per-class forward split; global-cutoff feasibility (descriptive, no models)",
+  "scripts": {
+    "exp009_split_composition.py": "7457ee228ff18e668bdeab1ab92f3caea41bcd4cf6b77cae30bafad09bac1123",
+    "exp004_leakage_vs_drift.py": "0679f8512315844add59898b91e7d067ced08f9beac0a3040dad83e34d27cae5",
+    "ids_common.py": "275bca9a0a0a29fa9cf299348df3271e7436600bdfb54d1be4e455f7c894d831"
+  },
+  "cmd": "python exp009_split_composition.py",
+  "dedup_policy": "drop_conflicts",
+  "runtime_sec": 91.1,
+  "env": {
+    "python": "3.13.1",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "outputs": {
+    "summary.json": "ea2d5963e62d3f3f69c892a87edf8f3900d071f2493b0b464d0a01393da7a598"
+  }
+}

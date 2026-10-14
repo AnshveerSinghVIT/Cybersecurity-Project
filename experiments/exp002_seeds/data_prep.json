@@ -1,0 +1,89 @@
+{
+  "load": {
+    "rows_raw": 2830743,
+    "rows_after_nan_inf_drop": 2827876,
+    "n_features": 76,
+    "dataset_files": {
+      "Monday-WorkingHours.pcap_ISCX.csv": 176927918,
+      "Tuesday-WorkingHours.pcap_ISCX.csv": 135078995,
+      "Wednesday-workingHours.pcap_ISCX.csv": 225166395,
+      "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": 83102436,
+      "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": 52023263,
+      "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 77123859,
+      "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 76906168,
+      "Friday-WorkingHours-Morning.pcap_ISCX.csv": 58316725
+    }
+  },
+  "conflicts_before_dedup": {
+    "unique_feature_rows": 2198624,
+    "duplicate_rate_keep_first": 0.22251753612958983,
+    "conflicting_groups": 309,
+    "rows_in_conflicting_groups": 82704,
+    "conflict_rows_by_label": {
+      "PortScan": 76265,
+      "DoS Hulk": 4990,
+      "BENIGN": 1239,
+      "Bot": 202,
+      "DDoS": 6,
+      "DoS slowloris": 2
+    },
+    "conflict_groups_by_label": {
+      "BENIGN": 309,
+      "Bot": 40,
+      "DDoS": 3,
+      "DoS Hulk": 158,
+      "DoS slowloris": 2,
+      "PortScan": 106
+    },
+    "largest_conflict_group_rows": 6654
+  },
+  "taxonomy": {
+    "label_support": {
+      "BENIGN": 1862156,
+      "DoS Hulk": 172688,
+      "DDoS": 128011,
+      "DoS GoldenEye": 10275,
+      "FTP-Patator": 5931,
+      "DoS slowloris": 5370,
+      "DoS Slowhttptest": 5228,
+      "SSH-Patator": 3219,
+      "PortScan": 1850,
+      "Web Attack - Brute Force": 1470,
+      "Bot": 1397,
+      "Web Attack - XSS": 652,
+      "Infiltration": 36,
+      "Web Attack - Sql Injection": 21,
+      "Heartbleed": 11
+    },
+    "fine_classes": {
+      "Benign": 1862156,
+      "DoS Hulk": 172688,
+      "DDoS": 128011,
+      "DoS GoldenEye": 10275,
+      "FTP-Patator": 5931,
+      "DoS slowloris": 5370,
+      "DoS Slowhttptest": 5228,
+      "SSH-Patator": 3219,
+      "PortScan": 1850,
+      "Web Attack - Brute Force": 1470,
+      "Bot": 1397,
+      "Web Attack - XSS": 652,
+      "Other/Rare": 68
+    },
+    "family_classes": {
+      "Benign": 1862156,
+      "DoS/DDoS": 321572,
+      "Brute Force": 9150,
+      "Web Attack": 2143,
+      "PortScan": 1850,
+      "Bot": 1397,
+      "Other/Rare": 47
+    },
+    "merged_into_other_rare_fine": [
+      "Heartbleed",
+      "Infiltration",
+      "Web Attack - Sql Injection"
+    ]
+  },
+  "rows_after_dedup": 2198315
+}

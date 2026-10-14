@@ -1,0 +1,51 @@
+Loading 2017 ...
+  loaded Monday-WorkingHours.pcap_ISCX.csv: 529,481 (after NaN/Inf drop)
+  loaded Tuesday-WorkingHours.pcap_ISCX.csv: 445,645 (after NaN/Inf drop)
+  loaded Wednesday-workingHours.pcap_ISCX.csv: 691,406 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288,395 (after NaN/Inf drop)
+  loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170,231 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225,711 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286,096 (after NaN/Inf drop)
+  loaded Friday-WorkingHours-Morning.pcap_ISCX.csv: 190,911 (after NaN/Inf drop)
+Loading 2018 ...
+  loaded Friday-16-02-2018_TrafficForML_CICFlowMeter.csv: 1,048,574
+  loaded Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv: 1,048,575
+  aligned features: 75 (2017 had 76; dropped: ['Fwd Header Length.1'])
+  train: {'BENIGN': 1471103, 'DoS Hulk': 136424, 'DDoS': 101128, 'DoS GoldenEye': 8118, 'DoS slowloris': 4243, 'DoS Slowhttptest': 4130, 'Web Attack - Brute Force': 1162, 'Web Attack - XSS': 515, 'Web Attack - Sql Injection': 16}
+  ref test: {'BENIGN': 372432, 'DoS Hulk': 34538, 'DDoS': 25603, 'DoS GoldenEye': 2055, 'DoS slowloris': 1074, 'DoS Slowhttptest': 1046, 'Web Attack - Brute Force': 294, 'Web Attack - XSS': 131, 'Web Attack - Sql Injection': 5}
+  cross test: {'BENIGN': 1274630, 'DoS Hulk': 145199, 'Web Attack - Brute Force': 225, 'Web Attack - XSS': 79, 'DoS Slowhttptest': 55, 'Web Attack - Sql Injection': 31}
+  ready (239s)
+seed 42: ref e2e=0.9496 cross e2e=0.3157 | cross recall DoS=0.001 Web=0.000 FPR=0.0001 (149.2s)
+seed 1: ref e2e=0.9479 cross e2e=0.3154 | cross recall DoS=0.000 Web=0.000 FPR=0.0001 (165.2s)
+seed 2: ref e2e=0.9461 cross e2e=0.3155 | cross recall DoS=0.000 Web=0.000 FPR=0.0001 (157.2s)
+seed 3: ref e2e=0.9532 cross e2e=0.3155 | cross recall DoS=0.000 Web=0.000 FPR=0.0001 (152.8s)
+seed 4: ref e2e=0.9487 cross e2e=0.3494 | cross recall DoS=0.000 Web=0.054 FPR=0.0001 (155.3s)
+| Metric | 2017→2017 (reference) | 2017→2018 (cross) |
+|---|---|---|
+| Stage 1 malicious F1 | 0.9017 ± 0.0050 | 0.0006 ± 0.0004 |
+| Stage 1 benign FPR | 0.0259 ± 0.0013 | 0.0001 ± 0.0000 |
+| Stage 2 family macro-F1 (GT malicious) | 0.9884 ± 0.0054 | 0.7772 ± 0.0455 |
+| End-to-end 3-class macro-F1 | 0.9491 ± 0.0026 | 0.3223 ± 0.0151 |
+| Benign: Stage 1 recall (n=372,432 / 1,274,630) | 0.9741 ± 0.0013 | 0.9999 ± 0.0000 |
+| Benign: E2E recall (n=372,432 / 1,274,630) | 0.9741 ± 0.0013 | 0.9999 ± 0.0000 |
+| Benign: E2E precision (n=372,432 / 1,274,630) | 0.9900 ± 0.0006 | 0.8975 ± 0.0000 |
+| DoS/DDoS: Stage 1 recall (n=64,316 / 145,254) | 0.9431 ± 0.0032 | 0.0003 ± 0.0002 |
+| DoS/DDoS: E2E recall (n=64,316 / 145,254) | 0.9431 ± 0.0032 | 0.0003 ± 0.0002 |
+| DoS/DDoS: E2E precision (n=64,316 / 145,254) | 0.8629 ± 0.0066 | 0.1773 ± 0.1114 |
+| Web Attack: Stage 1 recall (n=430 / 335) | 0.9423 ± 0.0067 | 0.0107 ± 0.0240 |
+| Web Attack: E2E recall (n=430 / 335) | 0.9372 ± 0.0057 | 0.0107 ± 0.0240 |
+| Web Attack: E2E precision (n=430 / 335) | 0.9926 ± 0.0000 | 1.0000 ± 0.0000 |
+
+Per raw label (end-to-end recall):
+
+| Raw label | n ref | ref E2E recall | n cross | cross E2E recall |
+|---|---|---|---|---|
+| BENIGN | 372432 | 0.9741 ± 0.0013 | 1274630 | 0.9999 ± 0.0000 |
+| DDoS | 25603 | 0.9974 ± 0.0001 | - | - |
+| DoS GoldenEye | 2055 | 0.9985 ± 0.0000 | - | - |
+| DoS Hulk | 34538 | 0.8988 ± 0.0059 | 145199 | 0.0003 ± 0.0002 |
+| DoS Slowhttptest | 1046 | 0.9960 ± 0.0004 | 55 | 0.0000 ± 0.0000 |
+| DoS slowloris | 1074 | 0.9196 ± 0.0067 | - | - |
+| Web Attack - Brute Force | 294 | 0.9619 ± 0.0065 | 225 | 0.0000 ± 0.0000 |
+| Web Attack - Sql Injection | 5 | 0.3200 ± 0.1095 | 31 | 0.0000 ± 0.0000 |
+| Web Attack - XSS | 131 | 0.9053 ± 0.0042 | 79 | 0.0456 ± 0.1019 |
